@@ -1,7 +1,15 @@
 package BancoDigitalDio;
 
-public class Poupanca  {
-    private int agnecia;
-    private int numero;
-    private double saldo;
+public class Poupanca extends Conta {
+
+
+    public Poupanca(Cliente cliente) {
+        super(cliente);
+    }
+
+    @Override
+    public void imprimirExtrato() {
+        System.out.println("Extrato conta poupança ");
+        super.imprimirInfoComuns();
+    }
 }

@@ -1,7 +1,15 @@
 package BancoDigitalDio;
 
-public class ContaCorrente {
-    private int agnecia;
-    private int numero;
-    private double saldo;
+public class ContaCorrente extends Conta {
+
+
+    public ContaCorrente(Cliente cliente) {
+        super(cliente);
+    }
+
+    @Override
+    public void imprimirExtrato() {
+        System.out.println("Extrato conta corrente ");
+        super.imprimirInfoComuns();
+    }
 }
