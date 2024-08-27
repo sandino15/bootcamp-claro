@@ -8,6 +8,7 @@ abstract class Conta implements  IConta{
     protected double saldo;
     protected  Cliente cliente;
 
+
     public  Conta(Cliente cliente){
         this.agnecia = Conta.AGENCIA_PADRAO;
         this.numero = SEQUENCIAL ++;
@@ -29,6 +30,11 @@ abstract class Conta implements  IConta{
 
         this.sacar(valor);
         contaDestino.depositar(valor);
+    }
+
+    public void transferirPix(double valor, Conta contaPix){
+        this.sacar(valor);
+        contaPix.depositar(valor);
     }
 
 

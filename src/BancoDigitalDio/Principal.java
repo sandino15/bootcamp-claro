@@ -11,8 +11,11 @@ public class Principal {
         cliente.setNome("san");
         cc.depositar(1000);
         cc.transferir(100,poupanca);
+        cc.transferirPix(100,poupanca);
         cc.imprimirExtrato();
         poupanca.imprimirExtrato();
+
+
 
     }
 }
